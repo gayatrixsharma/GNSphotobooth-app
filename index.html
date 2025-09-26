@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GNS Photobooth</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="welcomeScreen" class="screen active">
+        <div class="header">GNS<br>PHOTOBOOTH</div>
+        <div class="instructions">
+            🎉 WELCOME TO THE ULTIMATE PHOTOBOOTH EXPERIENCE! 🎉
+            Get ready to strike a pose and capture your beautiful self! Just hit START and let the magic begin. You'll get to snap 3 amazing photos each round ... and the best part? You get unlimited tries to perfect your masterpiece.
+
+            ✨ Grab your friends.
+            ✨ Bring your energy.
+            ✨ Create memories worth sharing forever.
+
+            📸 Ready? Let's go make some picture-perfect fun!
+        </div>
+        <button id="startButton">START</button>
+    </div>
+
+    <div id="cameraScreen" class="screen">
+        <div class="header">GNS<br>PHOTOBOOTH</div>
+        
+        <div class="camera-view">
+            <video id="videoElement" autoplay playsinline></video>
+        </div>
+        
+        <div class="photo-counter">Photo: <span id="photoNumber">1</span>/3</div>
+        <div class="encouragement">YOU LOOK AMAZING! READY FOR PHOTO <span id="currentPhoto">1</span></div>
+        
+        <button id="captureButton">📸 CAPTURE PHOTO</button>
+        
+        <div class="preview-area">
+            <h3>Your Photos:</h3>
+            <div class="preview-container" id="previewContainer"></div>
+        </div>
+    </div>
+
+    <div id="resultsScreen" class="screen">
+        <div class="header">GNS<br>PHOTOBOOTH</div>
+        <div id="resultsContainer"></div>
+        <button id="downloadButton">DOWNLOAD</button>
+        <button id="restartButton">TAKE MORE PHOTOS</button>
+    </div>
+
+    <canvas id="canvasElement" style="display: none;"></canvas>
+
+    <script src="script.js"></script>
+</body>
+</html>
